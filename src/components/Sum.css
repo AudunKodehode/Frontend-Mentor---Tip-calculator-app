@@ -1,0 +1,32 @@
+
+.split{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h3{
+color: var(--neutral6);
+font-size: 16px;
+}
+p{
+    color: var(--neutral3);
+}
+.sums{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.split img{
+    width: 26px;
+    height: 40px;
+    
+}
+h1{
+    font-size: 40px;
+    color: var(--primary);
+}
+.dollarSum{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

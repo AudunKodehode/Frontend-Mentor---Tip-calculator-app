@@ -1,14 +1,12 @@
-import './Input.css'
+import "./Input.css";
 
-function onChange(){
-    
-}
+function onChange() {}
 
-export default function Input(props){
-    return(
-        <div className="inputComponent">
-            <img src={props.svg} alt="" />
-        <input type="number" onChange={onChange()} /> 
-        </div>
-    )
+export default function Input(props) {
+  return (
+    <div className="inputComponent" id={props.size}>
+      <img src={props.svg} alt=""  />
+      <input value={props.value} id={props.size} type="number" placeholder={props.placeholder} onChange={onChange()} />
+    </div>
+  );
 }

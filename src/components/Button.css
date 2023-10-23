@@ -32,3 +32,6 @@ button {
     background: var(--neutral4);
     color: var(--neutral2);
 }
+button:hover{
+    cursor: pointer;
+}
