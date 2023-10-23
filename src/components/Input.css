@@ -1,0 +1,29 @@
+@import url("src/components/RootColors.css");
+.inputComponent {
+  width: 380px;
+  height: 46px;
+  background-color: var(--neutral4);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputComponent img {
+  width: 16px;
+  margin-left: 10px;
+}
+input {
+    -webkit-appearance: none;
+  -moz-appearance: textfield;
+  height: 80%;
+  font-size: 26px;
+  margin-right: 10px;
+  background-color: var(--neutral4);
+  text-align: right;
+  border: none;
+  color: var(--neutral1);
+}
+input:active {
+  border: none;
+}

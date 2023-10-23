@@ -1,0 +1,12 @@
+@import url('src/components/RootColors.css');
+
+#root{
+    background: var(--neutral4);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+

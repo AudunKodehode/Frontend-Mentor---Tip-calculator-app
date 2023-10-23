@@ -1,0 +1,34 @@
+@import url('src/components/RootColors.css');
+
+
+button {
+    border-radius: 6px;
+    font-size: 20px;
+    border: none;
+}
+.small {
+  width: 105px;
+  height: 47px;
+}
+
+
+.wide {
+  width: 306px;
+  height: 47px;
+}
+.dark {
+    background: var(--neutral1);
+    color: var(--neutral6);
+}
+.dark:hover {
+    background: var(--primary);
+    color: var(--neutral1);
+}
+.medium {
+  background: var(--primary);
+  color: var(--neutral1);
+}
+.light {
+    background: var(--neutral4);
+    color: var(--neutral2);
+}
