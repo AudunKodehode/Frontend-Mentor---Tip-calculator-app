@@ -4,7 +4,7 @@ import Input from "./Input";
 import person from "/public/images/icon-person.svg";
 import dollar from "/public/images/icon-dollar.svg";
 import Sum from "./Sum";
-import "./RootColors.css"
+import "./RootColors.css";
 import "./Splitter.css";
 
 export default function Splitter() {
