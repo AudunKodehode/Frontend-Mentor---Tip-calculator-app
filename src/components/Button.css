@@ -24,6 +24,10 @@ button {
     background: var(--primary);
     color: var(--neutral1);
 }
+.active {
+  background: var(--primary);
+  color: var(--neutral1);
+}
 .medium {
   background: var(--primary);
   color: var(--neutral1);

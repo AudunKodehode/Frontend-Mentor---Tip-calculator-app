@@ -13,6 +13,11 @@
   height: 100%;
   padding: 32px;
 }
+span {
+  color: #ca3323;
+  padding-left: 75px;
+  
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -26,7 +31,7 @@ label {
 .buttons {
   width: 100%;
   display: grid;
-  grid-template-columns: 105px 105px 105px; 
+  grid-template-columns: 105px 105px 105px;
   gap: 10px;
   padding-left: 5px;
 }

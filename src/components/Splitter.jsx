@@ -15,37 +15,34 @@ export default function Splitter() {
 
   function setPercent(percent) {
     setTipPercent(percent);
-switch(percent)
-    {
+    document.getElementById("5percent").classList.remove("active");
+    document.getElementById("10percent").classList.remove("active");
+    document.getElementById("15percent").classList.remove("active");
+    document.getElementById("25percent").classList.remove("active");
+    document.getElementById("50percent").classList.remove("active");
+    if (percent != 5 || percent != 10 || percent != 15 || percent != 25 || percent != 50) {
+      document.getElementById("small").classList.add("active");
+    }
+    console.log(percent);
+    switch (percent) {
       case 5:
-        // setTipPercent(5);
+        document.getElementById("5percent").classList.add("active");
         break;
       case 10:
-        // setTipPercent(10);
+        document.getElementById("10percent").classList.add("active");
         break;
       case 15:
-        // setTipPercent(15);
+        document.getElementById("15percent").classList.add("active");
         break;
       case 25:
-        // setTipPercent(25);
+        document.getElementById("25percent").classList.add("active");
         break;
       case 50:
-        // setTipPercent(50);
+        document.getElementById("50percent").classList.add("active");
         break;
     }
     calculateTip();
   }
-
-
-
-///////////////////////////////////////// SANETIZE INPUT WITH ONLY NUMBERS, AND COMMAS, PUNCTUATION, AND DECIMALS
-
-
-
-
-
-
-
 
   function calculateTip() {
     const tipPerPerson = (billAmount * (tipPercent / 100)) / people;
@@ -54,6 +51,7 @@ switch(percent)
     setTotalValue(totalPerPerson.toFixed(2));
   }
   useEffect(() => {
+    
     calculateTip();
   }, [tipPercent, billAmount, people]);
 
@@ -71,6 +69,11 @@ switch(percent)
   }
 
   function handlePeopleChange(newValue) {
+    if (newValue === "0") {
+      document.getElementById("zeroSpan").style.visibility = "show";
+    } else {
+      document.getElementById("zeroSpan").style.visibility = "hidden";
+    }
     setPeople(parseInt(newValue, 10));
     calculateTip();
   }
@@ -98,33 +101,38 @@ switch(percent)
                 onClick={() => setPercent(5)}
                 buttonType="small dark"
                 buttonText="5%"
+                id="5percent"
               />
               <Button
                 onClick={() => setPercent(10)}
                 buttonType="small dark"
                 buttonText="10%"
+                id="10percent"
               />
               <Button
                 onClick={() => setPercent(15)}
                 buttonType="small dark"
                 buttonText="15%"
+                id="15percent"
               />
               <Button
                 onClick={() => setPercent(25)}
                 buttonType="small dark"
                 buttonText="25%"
+                id="25percent"
               />
               <Button
                 onClick={() => setPercent(50)}
                 buttonType="small dark"
                 buttonText="50%"
+                id="50percent"
               />
-              <Input size="small" placeholder="CUSTOM" />
+              <Input onChange={setPercent} value={tipPercent} size="small" placeholder="CUSTOM" />
             </div>
           </div>
 
           <div className="people">
-            <label>Number of People</label>
+            <label>Number of People<span id="zeroSpan">Can't be zero</span></label>
             <Input
               value={people}
               size="large"
