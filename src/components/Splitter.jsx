@@ -56,8 +56,8 @@ export default function Splitter() {
     setTipValue(tipPerPerson.toFixed(2));
     setTotalValue(totalPerPerson.toFixed(2));
     document.getElementById("resetButton").classList.remove("inactive");
-    if (totalPerPerson == "NaN"){
-      console.log("naaaan")
+    if (totalPerPerson == "NaN") {
+      console.log("naaaan");
     }
   }
   useEffect(() => {
@@ -65,13 +65,12 @@ export default function Splitter() {
   }, [tipPercent, billAmount, people]);
 
   function resetTip() {
-    
     document.getElementById("zeroSpan").style.opacity = "0";
     document.getElementById("resetButton").classList.add("inactive");
     setBillAmount(0);
     setTipPercent(0);
     setPeople(1);
-    setTipValue(0.00);
+    setTipValue(0.0);
     setTotalValue(0);
   }
 
