@@ -20,7 +20,13 @@ export default function Splitter() {
     document.getElementById("15percent").classList.remove("active");
     document.getElementById("25percent").classList.remove("active");
     document.getElementById("50percent").classList.remove("active");
-    if (percent != 5 || percent != 10 || percent != 15 || percent != 25 || percent != 50) {
+    if (
+      percent != 5 ||
+      percent != 10 ||
+      percent != 15 ||
+      percent != 25 ||
+      percent != 50
+    ) {
       document.getElementById("small").classList.add("active");
     }
     console.log(percent);
@@ -49,17 +55,23 @@ export default function Splitter() {
     const totalPerPerson = (billAmount + tipPerPerson) / people;
     setTipValue(tipPerPerson.toFixed(2));
     setTotalValue(totalPerPerson.toFixed(2));
+    document.getElementById("resetButton").classList.remove("inactive");
+    if (totalPerPerson == "NaN"){
+      console.log("naaaan")
+    }
   }
   useEffect(() => {
-    
     calculateTip();
   }, [tipPercent, billAmount, people]);
 
   function resetTip() {
+    
+    document.getElementById("zeroSpan").style.opacity = "0";
+    document.getElementById("resetButton").classList.add("inactive");
     setBillAmount(0);
     setTipPercent(0);
     setPeople(1);
-    setTipValue(0);
+    setTipValue(0.00);
     setTotalValue(0);
   }
 
@@ -70,9 +82,9 @@ export default function Splitter() {
 
   function handlePeopleChange(newValue) {
     if (newValue === "0") {
-      document.getElementById("zeroSpan").style.visibility = "show";
+      document.getElementById("zeroSpan").style.opacity = "1";
     } else {
-      document.getElementById("zeroSpan").style.visibility = "hidden";
+      document.getElementById("zeroSpan").style.opacity = "0";
     }
     setPeople(parseInt(newValue, 10));
     calculateTip();
@@ -127,12 +139,19 @@ export default function Splitter() {
                 buttonText="50%"
                 id="50percent"
               />
-              <Input onChange={setPercent} value={tipPercent} size="small" placeholder="CUSTOM" />
+              <Input
+                onChange={setPercent}
+                value={tipPercent}
+                size="small"
+                placeholder="CUSTOM"
+              />
             </div>
           </div>
 
           <div className="people">
-            <label>Number of People<span id="zeroSpan">Can't be zero</span></label>
+            <label>
+              Number of People<span id="zeroSpan">Can&apos;t be zero</span>
+            </label>
             <Input
               value={people}
               size="large"
@@ -153,6 +172,7 @@ export default function Splitter() {
             onClick={resetTip}
             buttonType="wide medium"
             buttonText="RESET"
+            id="resetButton"
           />
         </div>
       </div>

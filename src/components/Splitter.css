@@ -16,7 +16,7 @@
 span {
   color: #ca3323;
   padding-left: 75px;
-  
+  opacity: 0;
 }
 .main {
   display: flex;
@@ -58,4 +58,45 @@ label {
   flex-direction: column;
   width: 80%;
   gap: 30px;
+}
+
+@media screen and (max-width: 865px) {
+  .main{
+    width: 100vw;
+  }
+  #root{
+    height: 100vh;
+  }
+.logoDiv{
+  margin-top: 10%;
+}
+  .splitter {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  div.bill{
+    width: 85%;
+  }
+  div.inputComponent{
+    width: 95%;
+  }
+  div.mainContainer{
+    padding: 0;
+    padding-left: 20px;
+  }
+  div.buttons{
+    width: 85%;
+  }
+  .resultContainer{
+    width: 100vw;
+    height: 60%;
+  }
+  .result{
+    margin: 30px;
+  }
 }

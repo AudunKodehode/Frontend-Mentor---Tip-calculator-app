@@ -28,6 +28,7 @@ button {
   background: var(--primary);
   color: var(--neutral1);
 }
+
 .medium {
   background: var(--primary);
   color: var(--neutral1);
@@ -38,4 +39,8 @@ button {
 }
 button:hover{
     cursor: pointer;
+}
+.inactive {
+  background: #0D686D;
+  color: var(--neutral1);
 }

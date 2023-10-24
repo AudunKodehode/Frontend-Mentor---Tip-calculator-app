@@ -5,8 +5,11 @@ function App() {
 
   return (
     <>
+    <div className="logoDiv">
     <img src={SPLITTERLOGO} alt="" />
+    </div>
     <Splitter/>
+    
     </>
   )
 }
