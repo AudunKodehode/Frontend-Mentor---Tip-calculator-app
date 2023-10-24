@@ -12,8 +12,8 @@ export default function Sum(props) {
           <p>{props.text2}</p>
         </div>
         <div className="dollarSum">
-        <img src={dollar} alt="" />
-        <h1>{props.sum}</h1>
+          <img src={dollar} alt="" />
+          <h1>{props.sum}</h1>
         </div>
       </div>
     </>

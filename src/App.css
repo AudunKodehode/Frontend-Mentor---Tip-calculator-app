@@ -1,12 +1,9 @@
-
-
-#root{
-    background: var(--neutral4);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 50px;
-    align-items: center;
+#root {
+  background: var(--neutral4);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
 }
-

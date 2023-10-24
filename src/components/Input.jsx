@@ -3,7 +3,6 @@ import "./Input.css";
 export default function Input(props) {
   const handleInputChange = (event) => {
     props.onChange(event.target.value);
-
   };
 
   return (

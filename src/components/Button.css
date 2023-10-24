@@ -1,28 +1,24 @@
-
-
-
 button {
-    border-radius: 6px;
-    font-size: 20px;
-    border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  border: none;
 }
 .small {
   width: 105px;
   height: 47px;
 }
 
-
 .wide {
   width: 306px;
   height: 47px;
 }
 .dark {
-    background: var(--neutral1);
-    color: var(--neutral6);
+  background: var(--neutral1);
+  color: var(--neutral6);
 }
 .dark:hover {
-    background: var(--primary);
-    color: var(--neutral1);
+  background: var(--primary);
+  color: var(--neutral1);
 }
 .active {
   background: var(--primary);
@@ -34,13 +30,13 @@ button {
   color: var(--neutral1);
 }
 .light {
-    background: var(--neutral4);
-    color: var(--neutral2);
+  background: var(--neutral4);
+  color: var(--neutral2);
 }
-button:hover{
-    cursor: pointer;
+button:hover {
+  cursor: pointer;
 }
 .inactive {
-  background: #0D686D;
+  background: #0d686d;
   color: var(--neutral1);
 }

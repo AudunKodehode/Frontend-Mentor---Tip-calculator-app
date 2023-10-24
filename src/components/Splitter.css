@@ -61,15 +61,15 @@ label {
 }
 
 @media screen and (max-width: 865px) {
-  .main{
+  .main {
     width: 100vw;
   }
-  #root{
+  #root {
     height: 100vh;
   }
-.logoDiv{
-  margin-top: 10%;
-}
+  .logoDiv {
+    margin-top: 10%;
+  }
   .splitter {
     width: 100vw;
     height: 100vh;
@@ -79,24 +79,24 @@ label {
     align-items: center;
     justify-content: center;
   }
-  div.bill{
+  div.bill {
     width: 85%;
   }
-  div.inputComponent{
+  div.inputComponent {
     width: 95%;
   }
-  div.mainContainer{
+  div.mainContainer {
     padding: 0;
     padding-left: 20px;
   }
-  div.buttons{
+  div.buttons {
     width: 85%;
   }
-  .resultContainer{
+  .resultContainer {
     width: 100vw;
     height: 60%;
   }
-  .result{
+  .result {
     margin: 30px;
   }
 }
