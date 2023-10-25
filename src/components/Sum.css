@@ -1,3 +1,9 @@
+
+.fem{
+  position: fixed;
+  bottom: 0;
+  font-size: 20px;
+}
 .split {
   display: flex;
   justify-content: space-between;
